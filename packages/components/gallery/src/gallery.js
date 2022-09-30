@@ -1,31 +1,25 @@
-const modalTemplate = document.createElement('template');
-modalTemplate.innerHTML = `
+const template = document.createElement('template');
+
+template.innerHTML = `
     <style>
-        dialog {
-            background: grey;
+        .container {
+            display: inline-block;
+            position: relative;
+            z-index: 2;
         }
     </style>
-  
-    <dialog>
-        Inhalt des Dialogs
-    </dialog>
+
+    <div class="container">
+ 
+    </div>
 `;
 
-class Modal extends HTMLElement {
-
-    static get observedAttributes() {
-        return ['key'];
-    }
+class Gallery extends HTMLElement {
 
     constructor() {
         super();
-        this.showInfo = false;
-        this.attachShadow({ mode: 'open' });
-        this.shadowRoot.appendChild(modalTemplate.content.cloneNode(true));
-    }
-
-    connectedCallback() {
-        this.shadowRoot.querySelector('#close').addEventListener('click', () => {this.remove()});
+        this.attachShadow({mode: "open"});
+        this.shadowRoot.appendChild(template.content.cloneNode(true));
     }
 
     /**
@@ -53,9 +47,8 @@ class Modal extends HTMLElement {
      * Lifecycle methode: ???
      */
     static get observedAttributes() {
-        console.log('Lifecycle methode: Attributes to observe.');
-        // return ['label'];
+        console.log('Lifecycle methode: Custom button element attributes to observe.');
     }
 }
 
-window.customElements.define('suus-modal', Modal);
+window.customElements.define("suus-gallery", Gallery);

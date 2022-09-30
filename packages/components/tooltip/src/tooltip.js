@@ -75,6 +75,9 @@ template.innerHTML = `
 `;
 
 class Tooltip extends HTMLElement {
+
+    isTooltipVisible = false;
+
     constructor() {
         super();
         this.attachShadow({mode: "open"});
@@ -91,6 +94,14 @@ class Tooltip extends HTMLElement {
         })
         this.shadowRoot.querySelector('.icon-close').addEventListener('click', () => {
             this.tooltip(false);
+        })
+
+        document.addEventListener('click', () => {
+            console.log('Window clicked: ' + this.isTooltipVisible);
+            if (this.isTooltipVisible == true) {
+                console.log('Tooltip schliessen');
+                this.tooltip(false);
+            }
         })
 
         if (this.getAttribute('background-color')) {
@@ -131,10 +142,12 @@ class Tooltip extends HTMLElement {
             tooltip.style.transform = 'scale(1)';
             iconInfo.style.display = 'none';
             iconClose.style.display = 'block';
+            this.isTooltipVisible = false;
         } else {
             tooltip.style.transform = 'scale(0)';
             iconInfo.style.display = 'block';
             iconClose.style.display = 'none';
+            this.isTooltipVisible = true;
         }
     }
 }

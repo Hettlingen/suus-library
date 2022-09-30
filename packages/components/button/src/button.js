@@ -1,7 +1,9 @@
 const template = document.createElement('template');
 
 template.innerHTML = `
-  <link rel="stylesheet" href="button.css">
+  <style>
+  
+  </style>
 
   <div class="container">
     <button id="idButton">
