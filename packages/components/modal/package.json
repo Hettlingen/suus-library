@@ -1,5 +1,5 @@
 {
-  "name": "modal",
+  "name": "@suus-ch/modal",
   "version": "0.0.0",
   "description": "> TODO: description",
   "author": "Martin Braun, SUUS Innovations, Switzerland 2022",
@@ -19,5 +19,8 @@
   },
   "scripts": {
     "test": "node __tests__/modal.test.js"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

@@ -1,5 +1,5 @@
 {
-  "name": "button",
+  "name": "@suus-ch/button",
   "version": "0.0.0",
   "description": "> TODO: description",
   "author": "Martin Braun, SUUS Innovations, Switzerland 2022",
@@ -19,5 +19,8 @@
   },
   "scripts": {
     "test": "node __tests__/button.test.js"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
