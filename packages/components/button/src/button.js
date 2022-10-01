@@ -2,7 +2,11 @@ const template = document.createElement('template');
 
 template.innerHTML = `
   <style>
-  
+       .container {
+            display: inline-block;
+            position: relative;
+            z-index: 2;
+        }
   </style>
 
   <div class="container">
