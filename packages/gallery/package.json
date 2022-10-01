@@ -1,6 +1,6 @@
 {
   "name": "@suus-ch/gallery",
-  "version": "0.0.4",
+  "version": "0.0.0",
   "description": "> TODO: description",
   "author": "Martin Braun, SUUS Innovations, Switzerland 2022",
   "homepage": "www.suus-innovations.ch",
@@ -23,5 +23,5 @@
   "publishConfig": {
     "access": "public"
   },
-  "gitHead": "4ca427281f8443be0b1d8c42e1cf616c6f82da87"
+  "gitHead": "7c9c24ed207522253ad84d09392a5f09ef193408"
 }
