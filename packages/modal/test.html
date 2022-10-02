@@ -2,16 +2,29 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <script type="module" src="src/gallery.js"></script>
+    <script type="module" src="src/modal.js"></script>
     <title>Test</title>
     <style>
         body {
             font-size: 1.5rem;
         }
     </style>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById("buttonModal")
+                .addEventListener("click", () => {
+                    console.log('Button gedrückt')
+                    document.getElementById("modalDialog").setAttribute('show', true);
+                });
+        });
+    </script>
 </head>
 <body>
     <h1>Modal Dialog Test</h1>
-    <suus-modal></suus-modal>
+    <button id="buttonModal">Modal öffnen</button>
+    <suus-modal id="modalDialog"></suus-modal>
+
+    <p style="font-size: 1400px">LOVE</p>
 </body>
 </html>
